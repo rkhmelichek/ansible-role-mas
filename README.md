@@ -38,7 +38,7 @@ Example Playbook
           prompt: "Enter Mac App Store password"
           private: yes
       roles:
-        - rkhmelichek.mas
+        - role: rkhmelichek.mas
           mas_apps:
             - { name: 1Password, id: 443987910 }
 

@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
   roles:
-    - ansible-role-mas
+    - role: ansible-role-mas
       mas_apps: []
