@@ -2,3 +2,4 @@
 - hosts: localhost
   roles:
     - ansible-role-mas
+      mas_apps: []
