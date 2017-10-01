@@ -1,4 +1,5 @@
 ---
+
 - name: sign in to the Mac App Store when email and password are provided
   shell: "{{ homebrew_prefix }}/bin/mas signin '{{ mas_email }}' '{{ mas_password }}'"
   register: mas_signin_result
