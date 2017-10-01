@@ -1,3 +1,10 @@
+/.idea/
+
+*.iml
+*.swm
+*.swn
+*.swo
 *.swp
+*.retry
 
 .DS_Store
