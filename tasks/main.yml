@@ -1,17 +1,17 @@
 ---
 
-- name: sign in to the Mac App Store when email and password are provided
+- name: Sign in to the Mac App Store when email and password are provided
   shell: "{{ homebrew_prefix }}/bin/mas signin '{{ mas_email }}' '{{ mas_password }}'"
   register: mas_signin_result
   when: mas_email != '' and mas_password != ''
   ignore_errors: true
 
-- name: list installed Mac App Store apps
+- name: List installed Mac App Store apps
   command: "{{ homebrew_prefix }}/bin/mas list"
   register: mas_list
   changed_when: false
 
-- name: install apps from the Mac App Store
+- name: Install apps from the Mac App Store
   command: "{{ homebrew_prefix }}/bin/mas install {{ item.id }}"
   with_items: "{{ mas_apps }}"
   when: "'{{ item.id }}' not in mas_list.stdout"
