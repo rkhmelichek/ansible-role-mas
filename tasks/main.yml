@@ -14,4 +14,4 @@
 - name: Install apps from the Mac App Store
   command: "{{ homebrew_prefix }}/bin/mas install {{ item.id }}"
   with_items: "{{ mas_apps }}"
-  when: "'{{ item.id }}' not in mas_list.stdout"
+  when: item.id | string not in mas_list.stdout
