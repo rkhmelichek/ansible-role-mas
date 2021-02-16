@@ -1,12 +1,12 @@
 ---
 
 os: osx
-osx_image: xcode9.2
+osx_image: xcode12.2
 language: objective-c
 
 install:
-  - sudo easy_install pip
-  - sudo pip install ansible
+  - sudo pip3 install pip --upgrade
+  - sudo pip3 install ansible
   - ansible --version
   - printf '[defaults]\nroles_path=../' | tee ansible.cfg
   - brew install mas
